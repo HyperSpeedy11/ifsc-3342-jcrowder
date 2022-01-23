@@ -20,19 +20,20 @@ a:focus, a:hover {
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
-	border-bottom: 3px solid #931420;
+	border-bottom: 3px solid rgb(0, 0, 70);
 		background-image: -moz-linear-gradient(
-	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	    30deg, rgb(0, 0, 70) 0%, rgb(0, 0, 70) 30%, white 50%, rgb(0, 0, 70) 80%, rgb(0, 0, 70) 100%);
 	background-image: -webkit-linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	    30deg, rgb(0, 0, 70) 0%, #eeedff 30%, white 50%, #eeedff 80%, rgb(0, 0, 70) 100%);
 	background-image: -o-linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	    30deg, rgb(0, 0, 70) 0%, #eeedff 30%, white 50%, #eeedff 80%, rgb(0, 0, 70) 100%);
 	background-image: linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	    30deg, rgb(0, 0, 70) 0%, #eeedff 30%, white 50%, #eeedff 80%, rgb(0, 0, 70) 100%);
 }
 header h2 {
 	font-size: 175%;
-	color: #800000;
+	padding-left: 1em;
+	color: navy;
 }
 header h3 {
 	font-size: 130%;
@@ -46,18 +47,18 @@ header img {
 	text-shadow: 2px 2px 2px #800000;
 }
 /* the styles for the navigation menu */
+
 #nav_menu ul {
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  	margin: 0;
+  	padding: 0;
+  	width: 200px;
 	position: relative;
 }
-#nav_menu ul li {
-	float: left;
-}
+
 #nav_menu ul li a {
     display: block;
-    width: 160px;
+    width: 200px;
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
@@ -148,9 +149,9 @@ article img {
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 235px;
 	float: right;
-	padding: 0 0 20px 20px;
+	padding: 0 0 20px 0px;
 }
 aside h2 {
 	color: #800000;
@@ -168,7 +169,7 @@ aside img {
 
 /* the styles for the footer */
 footer {
-	background-color: #931420;
+	background-color: rgb(0, 0, 70);
 	clear: both;
 
 }
