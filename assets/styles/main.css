@@ -14,9 +14,7 @@ body {
     border: 3px solid #8e9299;
     background-color: #DDDDDD;
 }
-a:focus, a:hover {
-	font-style: italic;
-}
+
 /* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
@@ -62,8 +60,8 @@ header img {
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
-    background-color: #8e9299;
-    color: white;
+	background-image: linear-gradient(to right, #8e9299 0%, #DDDDDD 100%);
+    color: black;
     font-weight: bold;
 }
 #nav_menu a.current {
@@ -79,6 +77,9 @@ header img {
 }
 #nav_menu ul li:hover > ul {
 	display: block;
+}
+a:focus, a:hover {
+	font-style: italic;
 }
 #nav_menu > ul::after {
     content: "";
