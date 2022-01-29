@@ -14,6 +14,9 @@ body {
     border: 3px solid #8e9299;
     background-color: #DDDDDD;
 }
+a:focus, a:hover {
+	font-style: italic;
+}
 
 /* the styles for the header */
 header {
@@ -35,6 +38,7 @@ header h2 {
 }
 header h3 {
 	font-size: 130%;
+	padding-left: 1em;
 	font-style: italic;
 }
 header img {
@@ -67,25 +71,14 @@ header img {
 #nav_menu a.current {
 	color: navy;
 }
-#nav_menu ul ul {
-    display: none;
-    position: absolute;
-    top: 100%;
+#nav_menu a:focus, #nav_menu a:hover {
+	display:block;
+	background-image: none;
+	background-color: #8e9299;
+	animation-name: backgroundChange;
+	animation-duration: 0.2s;
 }
-#nav_menu ul ul li {
-	float: none;
-}
-#nav_menu ul li:hover > ul {
-	display: block;
-}
-a:focus, a:hover {
-	font-style: italic;
-}
-#nav_menu > ul::after {
-    content: "";
-    clear: both;
-    display: block;
-}
+
 /* the styles for the main content */
 main {
 	clear: left;
@@ -180,36 +173,25 @@ footer p {
 	padding: 1em 0;
 }
 
-table {
-    border-top: 3px solid #800000;
-	border-bottom: 3px solid #800000;
-    border-collapse: collapse;
-	background-color: white;
+footer a{
+	text-decoration: none;
 }
-th, td {
-    padding: .2em .7em;
-    text-align: left;
-}
-th.left, td.left {
-	text-align: left;
-}
-tbody tr.bottom {
-	border-bottom: 3px solid #800000;
-}
-th.bold {
-	font-weight: bold;
-	text-align: right;
-}
-td.cost {
-	text-align: right;
-}
-tfoot{
-	border-top: 3px solid #800000;
-}
-thead {
-	border-bottom: 3px solid #800000;
-}
-tfoot th, tfoot td{
-	font-weight: bold;
-	text-align: right;
+
+@keyframes backgroundChange{
+	0%{
+		background-image: linear-gradient(to right, #8e9299 0%, #DDDDDD 100%);
+	}
+	25%{
+		background-image: linear-gradient(to right, #8e9299 0%, #8e9299 25%, #DDDDDD 100%);
+	}
+	50%{
+		background-image: linear-gradient(to right, #8e9299 0%, #8e9299 50%, #DDDDDD 100%);
+	}
+	75%{
+		background-image: linear-gradient(to right, #8e9299 0%, #8e9299 75%, #DDDDDD 100%);
+	}
+	100% {
+		background-image:none;
+		background-color: #8e9299;
+	}
 }
