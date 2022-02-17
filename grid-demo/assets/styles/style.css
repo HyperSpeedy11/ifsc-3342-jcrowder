@@ -28,40 +28,44 @@ html {
 
 
 .container{
-  width: 965px;
+  /*965px*/
+  width: 80vw;
   margin: 20px auto;
   border: 1px solid black;
-  background-image: url("../images/grid.png");
 }
 
 header.primary{
-  background-color: rgba(200, 0, 0, 0.6);;
-  width: 925px;
-  margin: 20px;
+  /*925px*/
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 95.855%;
+  margin: 2.073%;
   float: left;
-  padding: 20px;
+  padding: 2.073%;
 }
 
 #content {
-  background: rgba(200, 0, 0, 0.6);
+  /*610px*/
+  background: rgba(0, 0, 0, 0.2);
   float:left;
-  width:610px;
-  margin-left:20px;
-  padding:10px;
+  width:63.212%;
+  margin-left:2.073%;
+  padding:1.037%;
 }
 
 aside{
-  width:295px;
+  /*295px*/
+  width:30.57%;
   float:left;
-  background: rgba(200, 0, 0, 0.6);;
-  margin-left:20px;
-  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-left:2.073%;
+  padding: 1.037%;
 }
 
 footer.primary{
-  background: rgba(200, 0, 0, 0.6);;
-  width:925px;
-  margin:20px;
+  /*925px*/
+  background: rgba(0, 0, 0, 0.2);
+  width:95.855%;
+  margin:2.073%;
   float:left;
-  padding:10px;
+  padding:1.037%;
 }
