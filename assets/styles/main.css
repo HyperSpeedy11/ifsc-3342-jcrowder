@@ -9,7 +9,6 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
     margin: 0 auto;
     border: 3px solid #8e9299;
     background-color: #DDDDDD;
@@ -43,7 +42,7 @@ header h3 {
 }
 header img {
 	float: left;
-	padding: 0 30px;
+	padding: 0 3.75%;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
@@ -54,13 +53,11 @@ header img {
 	list-style-type: none;
   	margin: 0;
   	padding: 0;
-  	width: 200px;
 	position: relative;
 }
 
 #nav_menu ul li a {
     display: block;
-    width: 200px;
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
@@ -71,13 +68,7 @@ header img {
 #nav_menu a.current {
 	color: navy;
 }
-#nav_menu a:focus, #nav_menu a:hover {
-	display:block;
-	background-image: none;
-	background-color: #8e9299;
-	animation-name: backgroundChange;
-	animation-duration: 0.2s;
-}
+
 
 /* the styles for the main content */
 main {
@@ -87,15 +78,15 @@ main {
 main h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
-	padding-left: 20px;
+	padding-left: 2.5%;
 	color: navy;
 }
 
 /* the styles for the section */
 section {
-	width: 525px;
-	float: right;
-	padding: 0 20px 20px 20px;
+	width: 75%;
+	float: left;
+	padding: 0 2.5% 2.5% 2.5%;
 }
 section h1 {
 	font-size: 150%;
@@ -143,9 +134,9 @@ article img {
 
 /* the styles for the aside */
 aside {
-	width: 235px;
-	float: right;
-	padding: 0 0 20px 0px;
+	width: 18%;
+	float: left;
+	padding: 0 0 2.5% 0px;
 }
 aside h2 {
 	color: #800000;
@@ -193,5 +184,46 @@ footer a{
 	100% {
 		background-image:none;
 		background-color: #8e9299;
+	}
+}
+
+@media screen and (min-width: 1100px){
+	body{
+		width: 80vw;
+	}
+}
+@media screen and (min-width: 801px){
+	body{
+		width: 85vw;
+	}
+	#nav_menu a:focus, #nav_menu a:hover {
+		display:block;
+		background-image: none;
+		background-color: #8e9299;
+		animation-name: backgroundChange;
+		animation-duration: 0.2s;
+	}
+}
+@media screen and (max-width: 800px){
+	body{
+		width: 95vw;
+	}
+	aside{
+		clear: both;
+		width: 100%;
+	}
+	body{
+		clear: both;
+	}
+	#nav_menu ul li a{
+		background-image: none;
+		background-color: #a5a9af;
+	}
+	#nav_menu a:focus, #nav_menu a:hover {
+		display:block;
+		background-image: none;
+		background-color: #8e9299;
+		border: 1px, solid, black;
+
 	}
 }
