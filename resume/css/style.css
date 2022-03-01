@@ -7,20 +7,89 @@ html {
   box-sizing: inherit;
 }
 
+body{
+  font-family: 'Merriweather', serif;;
+  background-color: rgba(0,0,0,.2);
+  line-height: 1.6;
+}
+
+main{
+  padding: 1px 20px;
+}
+
 img {
-  max-width:400px;
+  max-width:100%;
   height:auto;
+}
+/* Nav */
+nav a:link, nav a:visited{
+  color:navy;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 8px 16px;
+  font-size: 0.75em;
+  background-color: #8a8a8a;
+  transition: background-color 0.5s ease;
+}
+nav a:hover{
+  background-color: navy;
+  color:white;
+}
+nav.primary{
+  text-align: center;
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 20px 20px 0px 20px;
+}
+
+.container{
+  max-width: 480px;
+  margin: auto;
+}
+
+dl{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
+dt{
+  font-weight: 800;
+  grid-column: 1;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+}
+
+dd{
+  margin: 0;
+  grid-column: 2;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+}
+
+/* Helper Classes*/
+.visuallyhidden{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
 }
 
 @media screen and (max-width: 576px) {
   .container {
-    margin: 20px;
     width: 95vw;
-    background-color: rgba(0,0,0,.2);
+    
   }
 
-  nav{
+  nav.primary{
     width:80vw;
-    text-align: center;
+  }
+
+  .grid{
+    grid-template-columns: 1fr;
   }
 }
