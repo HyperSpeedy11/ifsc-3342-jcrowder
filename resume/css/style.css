@@ -11,10 +11,16 @@ body{
   font-family: 'Merriweather', serif;;
   background-color: rgba(0,0,0,.2);
   line-height: 1.6;
+  border-left: 2px dashed navy;
+  border-right: 2px dashed navy;
 }
 
 main{
   padding: 1px 20px;
+}
+main h1{
+  color: navy;
+  text-align: center;
 }
 
 img {
@@ -27,7 +33,7 @@ nav a:link, nav a:visited{
   text-decoration: none;
   border: 1px solid black;
   padding: 8px 16px;
-  font-size: 0.75em;
+  font-size: .8em;
   background-color: #8a8a8a;
   transition: background-color 0.5s ease;
 }
@@ -46,7 +52,7 @@ nav.primary{
   max-width: 480px;
   margin: auto;
 }
-
+/* About Section */
 dl{
   display:grid;
   grid-template-columns: 1fr 2fr;
@@ -58,12 +64,76 @@ dt{
   padding: 10px 0;
   border-bottom: 1px solid #999;
 }
-
 dd{
   margin: 0;
   grid-column: 2;
   padding: 10px 0;
   border-bottom: 1px solid #999;
+}
+dd a:link, dd a:visited{
+  text-decoration: none;
+}
+
+/* Related Links */
+ul.related-links{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  padding: 1px;
+}
+ul.related-links li{
+  display: block;
+  text-align: center;
+}
+ul.related-links li a:link,
+ul.related-links li a:visited{
+  display: block;
+  background-color: #8a8a8a;
+  color: navy;
+  border: 1px dotted black;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease;
+}
+ul.related-links li a:hover{
+  background-color: navy;
+  color:white;
+}
+/* Experience */
+article.job{
+  display:block;
+  background-color: #aaa;
+  border: 1px solid black;
+  padding:0px 20px;
+  margin-bottom: 10px;
+}
+span[itemprop="name"]{
+  font-weight: 800;
+}
+article.job h3{
+  font-weight: 800;
+  color: navy;
+}
+article.job a:link, article.job a:visited{
+  color:navy;
+}
+p[itemprop="description"]{
+  font-style: italic;
+}
+
+/* Education */
+article.certificate{
+  display:block;
+  background-color: #aaa;
+  border: 1px solid black;
+  padding:0px 20px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer{
+  text-align: center;
 }
 
 /* Helper Classes*/
