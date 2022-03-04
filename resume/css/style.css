@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background-color: rgb(0, 0, 56);
 }
 *,
 *:before,
@@ -7,9 +8,15 @@ html {
   box-sizing: inherit;
 }
 
+.container{
+  max-width: 760px;
+  background: #dadada;
+  margin: auto;
+}
+
 body{
-  font-family: 'Merriweather', serif;;
-  background-color: rgba(0,0,0,.2);
+  margin: auto;
+  font-family: 'Merriweather', serif;
   line-height: 1.6;
   border-left: 2px dashed navy;
   border-right: 2px dashed navy;
@@ -21,11 +28,13 @@ main{
 main h1{
   color: navy;
   text-align: center;
+  grid-area: "name";
 }
 
 img {
   max-width:100%;
   height:auto;
+  margin: auto;
 }
 /* Nav */
 nav a:link, nav a:visited{
@@ -48,11 +57,13 @@ nav.primary{
   padding: 20px 20px 0px 20px;
 }
 
-.container{
-  max-width: 480px;
-  margin: auto;
-}
+
 /* About Section */
+#about{
+  grid-area: "about";
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 dl{
   display:grid;
   grid-template-columns: 1fr 2fr;
@@ -100,12 +111,21 @@ ul.related-links li a:hover{
   background-color: navy;
   color:white;
 }
+
+#skills{
+  grid-area: "skills";
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 /* Experience */
+#experience{
+  grid-area: "experience";
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 article.job{
-  display:block;
-  background-color: #aaa;
-  border: 1px solid black;
-  padding:0px 20px;
+  padding:0px 20px 5px;
   margin-bottom: 10px;
 }
 span[itemprop="name"]{
@@ -123,11 +143,13 @@ p[itemprop="description"]{
 }
 
 /* Education */
+#education{
+  grid-area: "education";
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
 article.certificate{
-  display:block;
-  background-color: #aaa;
-  border: 1px solid black;
-  padding:0px 20px;
+  padding:0px 20px 10px;
   margin-bottom: 10px;
 }
 
@@ -148,18 +170,32 @@ footer{
   width: 1px;
   white-space: nowrap; /* 1 */
 }
-
-@media screen and (max-width: 576px) {
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:5px;
+  grid-template-areas: 
+    "about"
+    "skills"
+    "experience"
+    "education"
+  ;
+}
+/* Currently not working
+@media screen and (min-width: 768px) {
   .container {
     width: 95vw;
-    
+    max-width: 992px;
   }
-
-  nav.primary{
-    width:80vw;
-  }
-
   .grid{
-    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "about skills"
+      "about experience"
+      "education";
   }
+
+  
 }
+*/
