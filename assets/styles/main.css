@@ -94,23 +94,28 @@ section h1 {
 	margin: 0;
 }
 section h2 {
-	color: #800000;
+	color: #020068;
 	font-size: 130%;
-	padding: .5em 0 .25em 0;
+	padding: .25em 0 .25em 0;
 }
 section p {
 	padding-bottom: .5em;
 }
-section blockquote {
-	padding: 0 2em;
-	font-style: italic;
+
+#Questionaire{
+	padding-left: 1em;
 }
-section ul {
+
+#Questionaire dl {
 	padding: 0 0 .25em 1.25em;
-	list-style-type: circle;
+	list-style-type: "> ";
 }
-section li {
+#Questionaire dt {
+	font-weight: bold;
 	padding-bottom: .35em;
+}
+#Questionaire dd{
+	padding: 0 0 .35em 1.5em;
 }
 
 /* the styles for the article */
