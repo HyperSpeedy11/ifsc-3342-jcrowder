@@ -89,7 +89,7 @@ dd a:link, dd a:visited{
 ul.related-links{
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em;
   padding: 1px;
 }
@@ -181,21 +181,33 @@ footer{
     "education"
   ;
 }
-/* Currently not working
-@media screen and (min-width: 768px) {
-  .container {
-    width: 95vw;
-    max-width: 992px;
-  }
-  .grid{
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-      "about skills"
-      "about experience"
-      "education";
-  }
 
-  
+@media screen and (min-width: 768px) {
+  	.container {
+    	width: 95vw;
+    	max-width: 992px;
+  	}
+	.dropdown{
+		display: none;
+	}
 }
-*/
+
+@media screen and (max-width:768px){
+	.container {
+		width: 85vw;
+		max-width: 992px;
+	}
+
+	nav.primary{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+	}
+	
+	nav.primary a{
+		float: none;
+		font-size: .7em;
+		text-align: center;
+		padding: 10px 5vw;
+		text-decoration: none;
+	}
+}
