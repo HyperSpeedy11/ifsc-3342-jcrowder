@@ -81,7 +81,10 @@ dd{
   	padding: 10px 0;
   	border-bottom: 1px solid #999;
 }
-dd a:link, dd a:visited{
+dd a:link,
+dd a:visited,
+p a:link,
+p a:visited{
   	text-decoration: none;
 }
 
@@ -144,9 +147,10 @@ article.certificate h3{
 p[itemprop="description"]{
   	font-style: italic;
 }
-[itemprop="telephone"],
-[itemprop="email"]{
+a[itemprop="telephone"],
+a[itemprop="email"]{
 	text-decoration: none;
+	color: blue;
 }
 
 /* Education */
