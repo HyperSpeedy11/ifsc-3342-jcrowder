@@ -1,185 +1,192 @@
 html {
-  box-sizing: border-box;
-  background-color: rgb(0, 0, 56);
+  	box-sizing: border-box;
+  	background-color: rgb(0, 0, 56);
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  	box-sizing: inherit;
 }
 
 .container{
-  max-width: 760px;
-  background: #dadada;
-  margin: auto;
+  	max-width: 760px;
+  	background: #dadada;
+  	margin: auto;
 }
 
 body{
-  margin: auto;
-  font-family: 'Merriweather', serif;
-  line-height: 1.6;
-  border-left: 2px dashed navy;
-  border-right: 2px dashed navy;
+  	margin: auto;
+  	font-family: 'Merriweather', serif;
+  	line-height: 1.6;
+  	border-left: 2px dashed navy;
+  	border-right: 2px dashed navy;
 }
 
 main{
-  padding: 1px 20px;
+  	padding: 1px 20px;
 }
 main h1{
-  color: navy;
-  text-align: center;
-  grid-area: "name";
+  	color: navy;
+  	text-align: center;
+  	grid-area: "name";
 }
 
 img {
-  max-width:100%;
-  height:auto;
-  margin: auto;
+  	max-width:100%;
+  	height:auto;
+  	margin: auto;
 }
 /* Nav */
 nav a:link, nav a:visited{
-  color:navy;
-  text-decoration: none;
-  border: 1px solid black;
-  padding: 8px 16px;
-  font-size: .8em;
-  background-color: #8a8a8a;
-  transition: background-color 0.5s ease;
+  	color:navy;
+  	text-decoration: none;
+  	border: 1px solid black;
+  	padding: 8px 16px;
+	font-size: .8em;
+  	background-color: #8a8a8a;
+  	transition: background-color 0.5s ease;
 }
 nav a:hover{
-  background-color: navy;
-  color:white;
+  	background-color: navy;
+  	color:white;
 }
 nav.primary{
-  text-align: center;
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
-  padding: 20px 20px 0px 20px;
+  	text-align: center;
+  	display:grid;
+  	grid-template-columns: repeat(4,1fr);
+  	padding: 20px 20px 0px 20px;
 }
 
 
 /* About Section */
 #about{
-  grid-area: "about";
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  	grid-area: "about";
+  	border-top: 1px solid black;
+  	border-bottom: 1px solid black;
 }
 dl{
-  display:grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto;
+  	display:grid;
+  	grid-template-columns: 1fr 2fr;
+  	grid-template-rows: auto;
 }
 dt{
-  font-weight: 800;
-  grid-column: 1;
-  padding: 10px 0;
-  border-bottom: 1px solid #999;
+  	font-weight: 800;
+  	grid-column: 1;
+  	padding: 10px 0;
+  	border-bottom: 1px solid #999;
 }
 dd{
-  margin: 0;
-  grid-column: 2;
-  padding: 10px 0;
-  border-bottom: 1px solid #999;
+  	margin: 0;
+  	grid-column: 2;
+  	padding: 10px 0;
+  	border-bottom: 1px solid #999;
 }
 dd a:link, dd a:visited{
-  text-decoration: none;
+  	text-decoration: none;
 }
 
 /* Related Links */
 ul.related-links{
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2em;
-  padding: 1px;
+  	list-style-type: none;
+  	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	grid-gap: 2em;
+  	padding: 1px;
 }
 ul.related-links li{
-  display: block;
-  text-align: center;
+  	display: block;
+  	text-align: center;
 }
 ul.related-links li a:link,
 ul.related-links li a:visited{
-  display: block;
-  background-color: #8a8a8a;
-  color: navy;
-  border: 1px dotted black;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: background-color 0.5s ease;
+  	display: block;
+  	background-color: #8a8a8a;
+  	color: navy;
+ 	border: 1px dotted black;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	transition: background-color 0.5s ease;
 }
 ul.related-links li a:hover{
-  background-color: navy;
-  color:white;
+  	background-color: navy;
+  	color:white;
 }
 
 #skills{
-  grid-area: "skills";
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  	grid-area: "skills";
+  	border-top: 1px solid black;
+  	border-bottom: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+#skills h2{
+	text-align: center;
 }
 
 /* Experience */
 #experience{
-  grid-area: "experience";
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  	grid-area: "experience";
+  	border-top: 1px solid black;
+  	border-bottom: 1px solid black;
 }
 article.job{
-  padding:0px 20px 5px;
-  margin-bottom: 10px;
+  	padding:0px 20px 5px;
+  	margin-bottom: 10px;
 }
 span[itemprop="name"]{
-  font-weight: 800;
+  	font-weight: 800;
 }
-article.job h3{
-  font-weight: 800;
-  color: navy;
-}
-article.job a:link, article.job a:visited{
-  color:navy;
+article.job h3,
+article.certificate h3{
+  	font-weight: 800;
+  	color: navy;
 }
 p[itemprop="description"]{
-  font-style: italic;
+  	font-style: italic;
+}
+[itemprop="telephone"],
+[itemprop="email"]{
+	text-decoration: none;
 }
 
 /* Education */
 #education{
-  grid-area: "education";
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  	grid-area: "education";
+  	border-top: 1px solid black;
+  	border-bottom: 1px solid black;
 }
 article.certificate{
-  padding:0px 20px 10px;
-  margin-bottom: 10px;
+  	padding:0px 20px 10px;
+  	margin-bottom: 10px;
 }
 
 /* Footer */
 footer{
-  text-align: center;
+  	text-align: center;
 }
 
 /* Helper Classes*/
 .visuallyhidden{
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap; /* 1 */
+  	border: 0;
+  	clip: rect(0 0 0 0);
+  	height: 1px;
+  	margin: -1px;
+  	overflow: hidden;
+  	padding: 0;
+  	position: absolute;
+  	width: 1px;
+  	white-space: nowrap; /* 1 */
 }
 .grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap:5px;
-  grid-template-areas: 
-    "about"
-    "skills"
-    "experience"
-    "education"
-  ;
+  	display: grid;
+  	grid-template-columns: 1fr;
+  	grid-gap:5px;
+  	grid-template-areas: 
+		"about"
+		"skills"
+		"experience"
+		"education"
+  	;
 }
 
 @media screen and (min-width: 768px) {
@@ -196,6 +203,12 @@ footer{
 	.container {
 		width: 85vw;
 		max-width: 992px;
+	}
+	#skills{
+		grid-template-columns: 1fr;
+	}
+	#skills h2{
+		text-align: left;
 	}
 
 	nav.primary{
