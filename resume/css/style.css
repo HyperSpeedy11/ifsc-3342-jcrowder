@@ -22,9 +22,6 @@ body{
   	border-right: 2px dashed navy;
 }
 
-main{
-  	padding: 1px 20px;
-}
 main h1{
   	color: navy;
   	text-align: center;
@@ -32,9 +29,10 @@ main h1{
 }
 
 img {
-  	max-width:100%;
+	width: 100%;
   	height:auto;
   	margin: auto;
+
 }
 /* Nav */
 nav a:link, nav a:visited{
@@ -60,14 +58,14 @@ nav.primary{
 
 /* About Section */
 #about{
-  	grid-area: "about";
+	display: block;
   	border-top: 1px solid black;
   	border-bottom: 1px solid black;
 }
 dl{
   	display:grid;
   	grid-template-columns: 1fr 2fr;
-  	grid-template-rows: auto;
+	margin-left: 2vw;
 }
 dt{
   	font-weight: 800;
@@ -106,6 +104,7 @@ ul.related-links li a:visited{
   	background-color: #8a8a8a;
   	color: navy;
  	border: 1px dotted black;
+	border-radius: 10px;
   	text-decoration: none;
   	text-transform: uppercase;
   	transition: background-color 0.5s ease;
@@ -195,29 +194,96 @@ footer{
 
 @media screen and (min-width: 768px) {
   	.container {
-    	width: 95vw;
+    	width: 85vw;
     	max-width: 992px;
   	}
+	img{
+		max-width: 350px;
+	}
+	main{
+  		padding: 1px 20px;
+}
+	#about{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
 	.dropdown{
 		display: none;
 	}
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) and (min-width:400px){
 	.container {
-		width: 85vw;
-		max-width: 992px;
+		padding: 1px;
 	}
-	#skills{
-		grid-template-columns: 1fr;
+	img{
+		margin-left: 12.5%;
+		width: 75%;
 	}
-	#skills h2{
-		text-align: left;
+	main{
+		padding: 1px 10px;
+	}
+	dl{
+		margin-left: 0;
 	}
 
 	nav.primary{
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
+		padding: 1px 15px;
+	}
+	
+	nav.primary a{
+		float: none;
+		font-size: .7em;
+		text-align: center;
+		padding: 10px 5vw;
+		text-decoration: none;
+	}
+}
+
+@media screen and (max-width:400px){
+	img{
+		width: 90%;
+		margin-left: 5%;
+	}
+	h1{
+		font-size: 1.5em;
+	}
+	h2{
+		font-size: 1.2em;
+	}
+	dl{
+		display: block;
+		margin-left: 0;
+	}
+	dt{
+		border: none;
+	}
+	dt, dd{
+		padding: 5px 0 0 0;
+	}
+	dd, p, li, span, a{
+		font-size: 10pt;
+	}
+	ul.related-links{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+	main{
+		padding: 1px 10px;
+	}
+
+	#skills{
+		grid-template-columns: 1fr;
+	}
+
+
+	nav.primary{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		padding: 1px 5px;
 	}
 	
 	nav.primary a{
